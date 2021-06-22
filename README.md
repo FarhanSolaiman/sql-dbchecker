@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="./assets/database.png" alt="SQL Database Checker" width="720">
+  <img src="https://github.com/FarhanSolaiman/sql-dbchecker/blob/main/assets/database.PNG" alt="SQL Database Checker" width="720">
   <br>
     SQL Database Checker
   <br>
