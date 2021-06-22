@@ -1,6 +1,6 @@
 <h1 align="center">SQL Database Checker</h1>
 
-<h4 align="center">An application used to check if a database has contents.</h4>
+<h4 align="center">An application used to check if a database(as of now MSSQL) has contents.</h4>
 
 ## Installation
 
@@ -49,3 +49,13 @@ pm2 restart {either name or id of the server}
 ```bash
 pm2 stop {either name or id of the server}
 ```
+
+## Limitation
+- Having some problem with queries that have owners
+- 20 rows only
+
+## Roadmap
+- add Oracle DB as database option
+- add MySQL as database option
+- allow specific number of rows to be pulled
+- pagination for multiple datas
