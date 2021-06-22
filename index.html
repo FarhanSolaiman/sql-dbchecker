@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSSQL Database Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link href="https://rawgit.com/abodelot/jquery.json-viewer/master/json-viewer/jquery.json-viewer.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="input">
+        <div class="container">
+            <h1 id="title">MSSQL Database Checker</h1>
+            <div class="card">
+                <div class="card-body">
+                    <form id="sqlForm" class="needs-validation" method="post" novalidate>
+                        <div class="row">
+                            <div class="col">
+                                <label for="dbName" class="form-label">Database Name</label>
+                                <input type="text" class="form-control" id="dbName" name="name" required>
+                                <label for="dbHost" class="form-label">Database Host</label>
+                                <input type="text" class="form-control" id="dbHost" name="host" required>
+                                <label for="dbPort" class="form-label">Database Port</label>
+                                <input type="number" class="form-control" id="dbPort" name="port" required>
+                            </div>
+                            <div class="col">
+                                <label for="dbUsername" class="form-label">Database Username</label>
+                                <input type="text" class="form-control" id="dbUsername" name="username" required>
+                                <label for="dbPassword" class="form-label">Database Password</label>
+                                <input type="password" class="form-control" id="dbPassword" name="password" required>
+                            </div>
+                        </div>
+                        <label for="query" class="form-label">SQL Query</label>
+                        <textarea class="form-control" id="query" rows="7" name="query" required></textarea>
+                        <div class="submitBtn d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="button" class="btn btn-light" onclick="clearField()">Clear</button>
+                            <button type="submit" id="btnSubmit" class="btn btn-primary">Start Query</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="output">
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
+        integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn"
+        crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/abodelot/jquery.json-viewer/master/json-viewer/jquery.json-viewer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#title {
+    margin: 1rem 0;
+}
+
+#title, label {
+    font-weight: 700;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+}
+
+.regStr {
+    border: 2px dashed #666;
+    margin: 20px;
+    padding: 10px;
+    font-size: 0.75rem;
+}
+#errorMessage {
+    border: 2px dashed #B00020;
+    margin: 20px;
+    padding: 10px;
+    color: #B00020;
+    font-size: 1rem;
+}
