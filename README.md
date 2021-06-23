@@ -24,6 +24,11 @@ You just open the _index.html_ and you are good to go.
 cd ./backend
 ```
 
+- Install all neccesary node packages. 
+```powershell
+npm i
+```
+
 - If you are initializing the server
 
 ```bash
