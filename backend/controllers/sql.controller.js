@@ -18,7 +18,10 @@ module.exports.asyncGetMSSQLData = async (req, res) => {
     try {
         let pool = await mssql.connect(sqlConfig);
         let result = await pool.request().query(req.body.query);
-        let cutResults = result.recordsets[0].slice(0,20);
+        let cutResults = [];
+        if (result.recordsets[0]) {
+            cutResults = result.recordsets[0].slice(0,20);
+        }
         await pool.close();
         sqlConfig = {};
         return res.status(200).send(cutResults);
